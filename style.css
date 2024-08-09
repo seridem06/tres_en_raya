@@ -1,0 +1,61 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000; /* Fondo negro */
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    color: #20db19;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff; /* Color de fondo de las celdas */
+    border: 1px solid #ccc;
+    font-size: 2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; /* Hacer el texto invisible para mostrar los símbolos con colores */
+}
+
+.cell.X {
+    color: #0000FF; /* Color azul para X */
+}
+
+.cell.O {
+    color: #FF0000; /* Color rojo para O */
+}
+
+.cell:hover {
+    background-color: #17df5a;
+}
+
+#reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#status {
+    font-size: 2em;
+    font-weight: bold;
+    color: hsl(256, 80%, 48%); /* Color del texto del estado */
+}
